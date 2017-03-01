@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+  {% for quote in quotes %}
+    <div class="pure-u-5-5 quote-block animated fadeIn">
+      <p class="quote">"{{ quote['quote'] }}"</p>
+      <p class="author">- {{ quote['name'].upper() }} -</p>
+    </div>
+  {% endfor %}
+{% endblock %}

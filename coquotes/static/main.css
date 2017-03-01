@@ -1,0 +1,89 @@
+body {
+	background-color: #FFFFFF;
+}
+
+.header {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.header h1 {
+	color: rgb(75, 75, 75);
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+	font-size: 4.2em;
+	letter-spacing: 0.05em;
+	margin: 15px 0 0 0;
+}
+
+.header h1 a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.header p {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.5em;
+	font-weight: 100;
+	margin: 0;
+	color: #666;
+}
+
+.quote-block {
+	border-bottom: 0px solid #f3f6f6;
+}
+
+.quote {
+	font-family: sans-serif;
+	font-weight: 100;
+	letter-spacing: 0.01em;
+	font-size: 1.5em;
+	text-align: center;
+	color: rgb(75, 75, 75);
+}
+
+.author {
+	font-family: sans-serif;
+	color: rgb(255, 82, 82);
+	text-align: center;
+	font-size: 1em;
+	font-weight: 100;
+	letter-spacing: 0.01em;
+}
+
+.form-block {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	justify-content: center;
+}
+
+.form-block input, textarea {
+	margin-bottom: 8px;
+}
+
+.form-block button {
+	background-color: rgb(255, 82, 82);
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.3em;
+	font-weight: 100;
+}
+
+.footer {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.footer p {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.2em;
+	font-weight: 100;
+	margin: 0;
+	color: #666;
+	text-align: center;
+}
+
+.footer a {
+	text-decoration: none;
+	color: rgb(255, 82, 82);
+}

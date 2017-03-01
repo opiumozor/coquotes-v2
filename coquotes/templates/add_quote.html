@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="pure-u-5-5">
+    <form method="post" action="/add_process" class="pure-form form-block">
+        <input type="text" class="pure-input-1-2" placeholder="Name" name="name" id="name" autofocus required>
+        <textarea class="pure-input-1-2" placeholder="Insert your quote here" name="quote" id="quote" required></textarea>
+        <button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Add quote</button>
+    </form>
+</div>
+{% endblock %}

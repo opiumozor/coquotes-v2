@@ -1,9 +1,9 @@
-# Coquotes
+# Coquotes v2
 Coquotes is a simple web page aimed to collect funny (or stupid) quotes told by my friends.
 
-The idea for this project came after spending four years with my friend Corentin aka Coco, who is the best source for stupid quotes.
+The idea for this project came after spending six years with my friend Corentin aka Coco, who is the best source for stupid quotes.
 
-Demo: http://quotes.opiumozor.com
+Demo: https://quotes.opiumozor.com
 
 This is the second version of this mini-project, you can find the first one here: [coquotes](https://github.com/opiumozor/coquotes).
 This one is written in Python & Flask.
@@ -18,7 +18,7 @@ This one is written in Python & Flask.
  * Flask
  * Funny friends
 
-## TODO
+## To do
 
 * update quotes
 * delete quotes

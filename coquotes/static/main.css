@@ -4,7 +4,11 @@ body {
 
 .header {
 	text-align: center;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
+}
+
+.header img {
+	width: 40px;
 }
 
 .header h1 {
@@ -29,8 +33,21 @@ body {
 	color: #666;
 }
 
+.filters {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.filters select {
+	width: 150px;
+}
+
 .quote-block {
 	border-bottom: 0px solid #f3f6f6;
+}
+
+.quote-block:nth-child(2n+0) {
+    background: url('crossword.png');
 }
 
 .quote {
@@ -51,6 +68,12 @@ body {
 	letter-spacing: 0.01em;
 }
 
+i.fa-quote-left, i.fa-quote-right { font-size: 15px; color: #c0c0c0; }
+
+i.fa-quote-left { margin-right: 5px; }
+
+i.fa-quote-right { margin-left: 10px; }
+
 .form-block {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -70,8 +93,8 @@ body {
 }
 
 .footer {
-	margin-top: 20px;
-	margin-bottom: 10px;
+	padding: 20px 0;
+	background: #f5f5f5;
 }
 
 .footer p {

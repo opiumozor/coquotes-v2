@@ -3,7 +3,6 @@ from coquotes import app
 from flask import render_template, make_response, request, redirect, url_for
 from coquotes.auth import requires_auth
 
-
 @app.route("/")
 def index():
     """
@@ -13,7 +12,10 @@ def index():
     except IOError:
         return make_response("Can't open quote file", 500)
     quotes_list = json.loads(f)
-    return render_template("quotes.html", quotes=quotes_list)
+    names = set()
+    for quote in quotes_list:
+        names.add(quote['name'])
+    return render_template("quotes.html", quotes=quotes_list, keys=names)
 
 
 @app.route("/admin")

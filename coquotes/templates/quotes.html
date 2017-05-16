@@ -25,9 +25,8 @@
 
 {% block javascript %}
 <script type="text/javascript">
-    var activeQuote = 0;
+    var in_process = false;
     $("#filter").on("change", function(){
-        alert('d');
         var needle = $(this).val();
         $('.quote-block').slideUp('slow').promise().always(function(){
             $("." + needle).slideDown('slow');
@@ -37,10 +36,11 @@
         e.preventDefault();
         $("#filter").val("quote-block");
         var randomIndex = Math.floor(Math.random() * ({{ quotes|length }} - 1));
-        if (randomIndex != activeQuote){
-            activeQuote = randomIndex;
-            $('.quote-block').slideUp('slow', function(){
-                $('#quote-' + randomIndex).slideDown('slow');
+        if (!in_process){
+            in_process = true;;
+            $('.quote-block').slideUp('slow');
+            $('#quote-' + randomIndex).slideDown('slow', function(){
+                in_process = false;
             });
         }
     });

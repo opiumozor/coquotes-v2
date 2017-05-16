@@ -14,3 +14,4 @@ QUOTES_FILE = 'quote_list.json'
 # Basic auth credentials
 USER = 'admin'
 PASSWORD = 'password'
+SECRET = 'qwertyuiop'

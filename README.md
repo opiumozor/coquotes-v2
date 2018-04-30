@@ -23,3 +23,4 @@ This one is written in Python & Flask.
 * update quotes
 * delete quotes
 * save the quote_list in the cloud (dropbox integration)
+* dockerize

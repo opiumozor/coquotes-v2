@@ -1,9 +1,49 @@
 {% extends "base.html" %}
 {% block content %}
+
+    <div class="pure-u-5-5 filters">
+        <form class="pure-form">
+            <select id="filter">
+                <option value="quote-block">All</option>
+                {% for key in keys %}
+                    <option value="{{ key.upper() }}">{{ key }}</option>
+                {% endfor %}
+            </select>
+            <button id="random" class="pure-button pure-button-primary"> Feeling lucky?</button>
+        </form>
+    </div>
+    <hr>
+
   {% for quote in quotes %}
-    <div class="pure-u-5-5 quote-block animated fadeIn">
-      <p class="quote">"{{ quote['quote'] }}"</p>
+    <div id="quote-{{ loop.index0 }}" class="pure-u-5-5 quote-block animated fadeIn {{ quote['name'].upper() }}">
+      <p class="quote"><i class="fa fa-quote-left" aria-hidden="true"></i> {{ quote['quote'] }}<i class="fa fa-quote-right" aria-hidden="true"></i></p>
       <p class="author">- {{ quote['name'].upper() }} -</p>
     </div>
   {% endfor %}
+{% endblock %}
+
+
+{% block javascript %}
+<script type="text/javascript">
+    var in_process = false;
+    $("#filter").on("change", function(){
+        var needle = $(this).val();
+        $('.quote-block').slideUp('slow').promise().always(function(){
+            $("." + needle).slideDown('slow');
+        });
+    });
+    $("#random").on('click', function(e){
+        e.preventDefault();
+        $("#filter").val("quote-block");
+        var randomIndex = Math.floor(Math.random() * ({{ quotes|length }} - 1));
+        if (!in_process){
+            in_process = true;;
+            $('.quote-block').slideUp('slow');
+            $('#quote-' + randomIndex).slideDown('slow', function(){
+                in_process = false;
+            });
+        }
+    });
+
+</script>
 {% endblock %}
